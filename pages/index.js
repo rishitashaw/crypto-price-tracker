@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Coin from "../Components/Coins";
+import CoinList from "../Components/Coins/CoinList";
 import Logo from "../Components/Logo";
 import SearchBar from "../Components/Search-bar";
 
-export default function Home() {
+export default function Home({ filteredCoins }) {
   return (
     <div>
       <Head>
@@ -14,8 +15,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <Logo />
         <SearchBar type="text" />
-        <Coin />
+        <CoinList filteredCoins={filteredCoins} />
       </main>
 
       <footer>Made with ♥ by Rishita</footer>
