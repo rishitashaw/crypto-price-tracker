@@ -1,3 +1,14 @@
+# Crypto Price Tracker
+
+made using next.js and coingecko api
+
+- displays a list of over 250 crypto currency
+- individual coin data
+- search option
+
+![Screenshot (105)](https://user-images.githubusercontent.com/75828535/119520472-f26eef80-bd97-11eb-81fc-178a159149f9.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
