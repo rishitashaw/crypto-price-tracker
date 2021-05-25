@@ -1,12 +1,13 @@
 .searchbar_box{
-    width: 300px;
+    width: 500px;
     display: flex;
     align-items: center;
+    margin: 0 auto 100px auto;
 
 }
 
 .searchbar{
-    border: 3px solid #323232;
+    border: 3px solid #171718;
     border-radius: 26px;
     outline: none;
     height: 100%;
