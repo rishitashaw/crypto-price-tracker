@@ -1,0 +1,16 @@
+.searchbar_box{
+    width: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchbar{
+    border: 3px solid #323232;
+    border-radius: 26px;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.3rem;
+}
