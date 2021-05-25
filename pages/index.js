@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import Head from "next/head";
 import Image from "next/image";
 import Coin from "../Components/Coins";
@@ -7,17 +9,27 @@ import Logo from "../Components/Logo";
 import SearchBar from "../Components/Search-bar";
 
 export default function Home({ filteredCoins }) {
-  return (
-    <div>
-      <Layout />
-      <main>
-        <Logo />
-        <SearchBar type="text" />
-        <CoinList filteredCoins={filteredCoins} />
-      </main>
+  const [search, setSearch] = useState("");
 
-      <footer>Made with ♥ by Rishita</footer>
-    </div>
+  const allCoins = filteredCoins.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    setSearch(e.target.value.toLowerCase());
+  };
+
+  return (
+    <Layout>
+      <div className="coin_app">
+        <SearchBar type="text" onChange={handleChange} />
+        <CoinList filteredCoins={allCoins} />
+
+        <footer>Made with ♥ by Rishita</footer>
+      </div>
+    </Layout>
   );
 }
 

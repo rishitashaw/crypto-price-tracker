@@ -1,4 +1,5 @@
 import Coin from "./index";
+import Link from "next/link";
 
 export default function CoinList({ filteredCoins }) {
   return (
@@ -7,6 +8,7 @@ export default function CoinList({ filteredCoins }) {
         return (
           <Coin
             key={coin.id}
+            id={coin.id}
             name={coin.name}
             symbol={coin.symbol}
             src={coin.image}

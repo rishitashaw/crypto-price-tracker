@@ -17,6 +17,7 @@ export default function Layout({ children, title = "Crypto Price Tracker" }) {
           </a>
         </Link>
       </header>
+      <main>{children}</main>
     </div>
   );
 }
